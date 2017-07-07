@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="vBox" minHeight="400.0" minWidth="640.0" prefHeight="600.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.MainPageController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="600.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+      <children>
+            <TextField fx:id="wordField" layoutX="14.0" layoutY="14.0" prefHeight="31.0" prefWidth="131.0" />
+            <TextField fx:id="descriptionField" layoutX="161.0" layoutY="14.0" prefHeight="31.0" prefWidth="117.0" />
+            <Button fx:id="addWordButton" layoutX="293.0" layoutY="14.0" mnemonicParsing="false" text="Добавить слово" />
+            <Button fx:id="startGameButton" layoutX="456.0" layoutY="15.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Начать игру" />
+            <Button fx:id="showStatisticsButton" layoutX="456.0" layoutY="61.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Показать статистику" />
+            <Button fx:id="deleteRowButton" layoutX="456.0" layoutY="107.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Удалить" />
+            <Button fx:id="resetAllGrades" layoutX="456.0" layoutY="153.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="170.0" text="Сбросить группы" />
+            <TableView fx:id="tableView" layoutX="14.0" layoutY="74.0" prefHeight="479.0" prefWidth="411.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="47.0" text="Id" />
+                <TableColumn fx:id="wordColumn" prefWidth="142.0" text="Word" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="147.0" text="Description" />
+                  <TableColumn fx:id="gradeColumn" prefWidth="74.0" text="Grade" />
+              </columns>
+            </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

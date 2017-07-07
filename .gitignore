@@ -1,0 +1,23 @@
+### Intellij+iml Patch ###
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/
+*.ipr
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### User settings ###
+.src/test
+.test
+
+.
